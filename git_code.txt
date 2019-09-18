@@ -6,7 +6,7 @@ git push    //Push to remote repository
 git pull    //Pull latest from remote repository
 git clone   //Copy remote repository to your current folder
 git config --global user.name 'Qiao Zhang'
-git config --global user.email 'qzhang3@webershandwick.com'
+git config --global user.email 'qiaoqz@xxxx.com'
 git rm --cached <file>  //remove a file from staging area
 git branch -D branch_name // deletes the local branch regardless of its push and merge status
 
@@ -16,7 +16,7 @@ git branch <branch name>    //create a new branch
 git checkout <branch name>      //switch to this branch(<branch name>)
 git merge <branch name>     //use gitcheckout to switch back to master, and then git merge this branch <branch name> back to master
 
-git remote add origin https://github.com/QiaoZhangqz/git_testing.git
+git remote add origin https://github.com/QiaoZhangbalabala/git_repo_name.git
 //add this repository as a remote repository
 //won't be able to push back, but can pull
 //need to --set--upstream origin
@@ -28,7 +28,7 @@ git push --set-upstream origin <sub branch name>
 //under the <sub branch name> branch
 
 git init
-git remote add origin https://github.com/QiaoZhangqz/git_testing.git
+git remote add origin https://github.com/QiaoZhangbalabala/git_repo_name.git
 //default branch is master after init
 //after creating a new empty folder, connect origin to this folder
 //to pull/push, there are two ways
