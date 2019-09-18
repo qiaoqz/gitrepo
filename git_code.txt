@@ -1,0 +1,59 @@
+git init    //Initialize Local Git Repository
+git add<file>   //Add files to staging area
+git status  //Check Status of Working Tree
+git commit -m "commit content"  //Commit Changes in staging area
+git push    //Push to remote repository
+git pull    //Pull latest from remote repository
+git clone   //Copy remote repository to your current folder
+git config --global user.name 'Qiao Zhang'
+git config --global user.email 'qzhang3@webershandwick.com'
+git rm --cached <file>  //remove a file from staging area
+git branch -D branch_name // deletes the local branch regardless of its push and merge status
+
+git add *.html  //add any kind of html file
+git add .   //add everything
+git branch <branch name>    //create a new branch
+git checkout <branch name>      //switch to this branch(<branch name>)
+git merge <branch name>     //use gitcheckout to switch back to master, and then git merge this branch <branch name> back to master
+
+git remote add origin https://github.com/QiaoZhangqz/git_testing.git
+//add this repository as a remote repository
+//won't be able to push back, but can pull
+//need to --set--upstream origin
+git push -u origin master   //push to remote repository
+
+git push --set-upstream origin <sub branch name>
+//create a new branch on Local
+//push this new branch to remote(origin) repository
+//under the <sub branch name> branch
+
+git init
+git remote add origin https://github.com/QiaoZhangqz/git_testing.git
+//default branch is master after init
+//after creating a new empty folder, connect origin to this folder
+//to pull/push, there are two ways
+1.  git pull origin master 
+    //git pull <remote repo name> <remote branch name>
+    //pull remote repo branch content to your local repo branch
+    git push --set-upstream origin master
+    //git push --set-upstream origin <exist branch in origin>
+    //if the branch does not exist, it would create a new pull request
+2.  git branch --set-upstream-to=origin/testbranch testbranch
+    //git branch --set-upstream-to=origin/<remote branch> <local branch>
+    //local branch must exist
+    git pull/push
+
+
+// push local sub-branch to a remote sub-branch that doesn't exist
+git push -u <remote> <local sub-branch>:<remote new branch>
+// in this case, the name of <local sub-branch>could be different from that of <remote new branch>
+// if it is the same, then maybe don't need the colon
+//instead, maybe git push -u <the local branch that you want to push to remote>
+// -u: set the upstream - need only pass -u once, it basically runs git branch --set-upstream-to
+
+git checkout testbranch
+//checkout to the lcoal sub-branch
+git push -u origin testbranch:testbranchQiao 
+//need the -u and push testbranch to the remote branch with the name of testbranchQiao
+
+
