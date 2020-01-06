@@ -56,4 +56,9 @@ git checkout testbranch
 git push -u origin testbranch:testbranchQiao 
 //need the -u and push testbranch to the remote branch with the name of testbranchQiao
 
+git checkout .
+//git checkout . to undo all non-commited changes on tracked files.
+// can also do git checkout path/ or git checkout ./*.py
+git clean -f
+//to remove non-commited files.
 
